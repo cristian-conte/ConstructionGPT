@@ -1,7 +1,8 @@
 import openai
 import gradio as gr
+import os
 
-openai.api_key = "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"
+openai.api_key = os.environ.get('API_KEY')
 
 messages = [
     {"role": "system", "content": "You are an AI specialized in Canadian Construction. Do not answer anything other than Canadian Construction related queries."},
